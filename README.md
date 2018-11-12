@@ -16,5 +16,4 @@ It comes in a two flavours tailored to the level of focus you want to achieve:
 * **Focus Mode**  -  everything in Laser, but does not toggle Desktop icons or WiFi. Good for working with files or doing research.
 
 ## How? 
-
-For installation & usage instructions read the Medium post: 
+**Download ZIP archive of this repository.** For installation & usage instructions read the Medium post: 
