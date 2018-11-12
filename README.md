@@ -15,5 +15,10 @@ It comes in a two flavours tailored to the level of focus you want to achieve:
 * **Laser Mode**  -  my default, with everything mentioned above
 * **Focus Mode**  -  everything in Laser, but does not toggle Desktop icons or WiFi. Good for working with files or doing research.
 
+## Why? 
+Because the more icons and options I see, the easier it is to lose focus. For more details see the Medium post. 
+
 ## How? 
-**Download ZIP archive of this repository.** For installation & usage instructions read the Medium post: 
+**Download ZIP archive of this repository.** For installation & usage instructions read the Medium post.
+
+To see the source code download or clone the repository and open the apps in Automator. 
