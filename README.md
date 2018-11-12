@@ -16,9 +16,9 @@ It comes in a two flavours tailored to the level of focus you want to achieve:
 * **Focus Mode**  -  everything in Laser, but does not toggle Desktop icons or WiFi. Good for working with files or doing research.
 
 ## Why? 
-Because the more icons and options I see, the easier it is to lose focus. For more details see the Medium post. 
+Because I found I work better when I don't see anything extra on my screen, and current apps were no good. For more details see the [Medium post](https://medium.com/@friendlyfoxes/laser-mode-on-your-mac-make-your-workspace-distraction-free-with-a-simple-keystroke-65938680cfac). 
 
 ## How? 
-**Download ZIP archive of this repository.** For installation & usage instructions read the Medium post.
+**Download ZIP archive of this repository.** For installation & usage instructions read the [Medium post](https://medium.com/@friendlyfoxes/laser-mode-on-your-mac-make-your-workspace-distraction-free-with-a-simple-keystroke-65938680cfac).
 
 To see the source code download or clone the repository and open the apps in Automator. 
