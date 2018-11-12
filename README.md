@@ -17,4 +17,4 @@ It comes in a two flavours tailored to the level of focus you want to achieve:
 
 ## How? 
 
-For installation instructions read the Medium post. 
+For installation & usage instructions read the Medium post: 
