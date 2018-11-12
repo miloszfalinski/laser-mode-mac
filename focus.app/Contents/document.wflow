@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AMApplicationBuild</key>
+	<string>444.39</string>
+	<key>AMApplicationVersion</key>
+	<string>2.9</string>
+	<key>AMDocumentVersion</key>
+	<string>2</string>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>source</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Run AppleScript.action</string>
+				<key>ActionName</key>
+				<string>Run AppleScript</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>source</key>
+					<string>-- Focus Script-- Compiled &amp; Edited by Milosz Falinski from things found on the internet. 
+-- NOTE: This is like the 'laser' script but without steps 5 (WiFi) &amp; 6 (Desktop icons)-- 1. Toggle Hide Menu Bartell application "System Preferences"	set bounds of window 1 to {0, 0, 0, 0}	reveal pane id "com.apple.preference.general"	delay 1	tell application "System Events"		click checkbox "Automatically hide and show the menu bar" of window "General" of process "System Preferences"	end tell	quitend tell-- 2. Toggle Hide Docktell application "System Events"	tell dock preferences		--get the properties list of the dock and set (or assign) it to our variable we'll call "dockprops"		set dockprops to get properties		--in our now "dockprops" list, assign our target dock property ("autohide") to the variable "dockhidestate"		set dockhidestate to autohide of dockprops		--the dock's "autohide" property is a boolean: it's value can only be either true or false		--an "if statement" provides the necessary logic to correctly handle either of these cases in this one single script		if autohide = true then			tell application "System Events"				tell dock preferences to set autohide to not autohide			end tell		else			set autohide to true		end if	end tellend tell-- 3. Toggle Appstell application "System Events"	set ProcessList to name of every process		-- Block: This block toggles Apple Stickies if it's running!	if "Stickies" is in ProcessList then		tell application "Finder"			if visible of process "Stickies" is true then				set visible of process "Stickies" to false			else				set visible of process "Stickies" to true			end if		end tell	end if	-- End Block		-- HEY YOU. YES YOU. You can add aditional apps to show/hide here, simply duplicate block above and change the app name from "Stickies"end tell-- 4. This sets Do Not Disturb via a keyboard shortcut, which is the only reliable method. -- NOTE: You have to set this shortcut yourself! Here I'm using Cmd+Opt+Ctrl+Shift+D to avoid any potential conflicts.ignoring application responses	tell application "System Events" to keystroke "D" using {command down, shift down, option down, control down}	end ignoring</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.RunScript</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>RunScriptAction</string>
+				<key>IgnoresInput</key>
+				<false/>
+				<key>InputUUID</key>
+				<string>2742C523-5526-492B-8C2D-D328E4643EB0</string>
+				<key>Keywords</key>
+				<array>
+					<string>Run</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>A3A18C36-BBA3-48A3-862C-8D72B65E9DBD</string>
+				<key>UUID</key>
+				<string>AA44E327-7B2B-4A5F-A1AC-BD55C115DCC8</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string>on run {input, parameters}
+	
+	(* Your script goes here *)
+	
+	return input
+end run</string>
+						<key>name</key>
+						<string>source</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>476.500000:673.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+	</array>
+	<key>connectors</key>
+	<dict/>
+	<key>workflowMetaData</key>
+	<dict>
+		<key>workflowTypeIdentifier</key>
+		<string>com.apple.Automator.application</string>
+	</dict>
+</dict>
+</plist>
